@@ -4,6 +4,35 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php 
+
+if ($_SERVER['REQUEST_METHOD'] == "POST"){
+	//JAWABAN PG
+$jawaban = ["A","B","C","D","A"];
+$status = [0,0,0,0,0];
+$no1 = $_POST['no1'];
+$no2 = $_POST['no2'];
+$no3 = $_POST['no3'];
+$no4 = $_POST['no4'];
+$no5 = $_POST['no5'];
+if ($no1 == $jawaban[0]){
+	$status[0] = 1;
+}
+if ($no2 == $jawaban[1]){
+	$status[1] = 1;
+}
+if ($no3 == $jawaban[2]){
+	$status[2] = 1;
+}
+if ($no4 == $jawaban[3]){
+	$status[3] = 1;
+}
+if ($no5 == $jawaban[4]){
+	$status[4] = 1;
+}
+
+}
+ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -84,66 +113,158 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--four-grids here-->
 		   <p class="summary">Entity Relationship Diagram (Part 2)</p>
 		<div class="row four-grids">
+		<form method="POST">
 			<div class="grid-form1">
 				<div class="form-group">
 					<label for="radio">1. What is Entity Relationship Diagram?</label>
 						<div class="jawaban">
-							<div class="radio block">A. <label><input type="radio" name="gender" value="A"> Is something that exists as itself, as a subject or as an object, actually or potentially, concretely or abstractly, physically or not</div>
-							<div class="radio block">B. <label><input type="radio" name="gender" value="B"> Is a strong, deep, or close association or acquaintance between two or more people that may range in duration from brief to enduring</div>
-							<div class="radio block">C. <label><input type="radio" name="gender" value="C"> Is a symbolic representation of information according to some visualization technique.</div>
-							<div class="radio block">D. <label><input type="radio" name="gender" value="D"> Entity-relationship diagram (ERD) is a graphical representation of an information system that shows the relationship between people, objects, places, concepts or events within that system</div>
-							<div class="radio block">E. <label><input type="radio" name="gender" value="E"> All answer is wrong</div>
+							<div class="radio block">A. <label><input type="radio" name="no1" value="A"> Is something that exists as itself, as a subject or as an object, actually or potentially, concretely or abstractly, physically or not</div>
+							<div class="radio block">B. <label><input type="radio" name="no1" value="B"> Is a strong, deep, or close association or acquaintance between two or more people that may range in duration from brief to enduring</div>
+							<div class="radio block">C. <label><input type="radio" name="no1" value="C"> Is a symbolic representation of information according to some visualization technique.</div>
+							<div class="radio block">D. <label><input type="radio" name="no1" value="D"> Entity-relationship diagram (ERD) is a graphical representation of an information system that shows the relationship between people, objects, places, concepts or events within that system</div>
+							<div class="radio block">E. <label><input type="radio" name="no1" value="E"> All answer is wrong</div>
 						</div>
+
+						<div>
+						<?php 
+							if (!empty($jawaban)){
+								$index = 0;
+								if ($status[$index] == 1){
+									?>
+									<p>Jawaban Benar</p>	
+									<?php
+								}
+								else
+								{
+									?>
+									<p>Jawaban Salah</p>	
+									<p>Jawaban yang benar adalah : <?php echo $jawaban[$index]; ?></p>
+									<?php 
+								}
+								?>
+								
+							<?php } ?>
+						</div>
+
 					</div>
 					<div class="form-group">
 					<label for="radio">2. This image represents...</label>
 					<img src="images/entity.png">
 						<div class="jawaban">
-							<div class="radio block">A. <label><input type="radio" name="gender" value="A"> Weak Entity</div>
-							<div class="radio block">B. <label><input type="radio" name="gender" value="B"> Entity Class</div>
-							<div class="radio block">C. <label><input type="radio" name="gender" value="C"> Relationship</div>
-							<div class="radio block">D. <label><input type="radio" name="gender" value="D"> Attribute</div>
-							<div class="radio block">E. <label><input type="radio" name="gender" value="E"> Derived Attribute</div>
+							<div class="radio block">A. <label><input type="radio" name="no2" value="A"> Weak Entity</div>
+							<div class="radio block">B. <label><input type="radio" name="no2" value="B"> Entity Class</div>
+							<div class="radio block">C. <label><input type="radio" name="no2" value="C"> Relationship</div>
+							<div class="radio block">D. <label><input type="radio" name="no2" value="D"> Attribute</div>
+							<div class="radio block">E. <label><input type="radio" name="no2" value="E"> Derived Attribute</div>
 						</div>
+						<?php 
+							if (!empty($jawaban)){
+								$index = 1;
+								if ($status[$index] == 1){
+									?>
+									<p>Jawaban Benar</p>	
+									<?php
+								}
+								else
+								{
+									?>
+									<p>Jawaban Salah</p>	
+								<p>Jawaban yang benar adalah : <?php echo $jawaban[$index]; ?></p>
+									<?php 
+								}
+								?>
+							<?php } ?>
 					</div>
 					<div class="form-group">
 					<label for="radio">3. This image represents...</label>
 					<img src="images/entity_weak.png">
 						<div class="jawaban">
-							<div class="radio block">A. <label><input type="radio" name="gender" value="A"> Weak Entity</div>
-							<div class="radio block">B. <label><input type="radio" name="gender" value="B"> Entity Class</div>
-							<div class="radio block">C. <label><input type="radio" name="gender" value="C"> Relationship</div>
-							<div class="radio block">D. <label><input type="radio" name="gender" value="D"> Attribute</div>
-							<div class="radio block">E. <label><input type="radio" name="gender" value="E"> Derived Attribute</div>
+							<div class="radio block">A. <label><input type="radio" name="no3" value="A"> Weak Entity</div>
+							<div class="radio block">B. <label><input type="radio" name="no3" value="B"> Entity Class</div>
+							<div class="radio block">C. <label><input type="radio" name="no3" value="C"> Relationship</div>
+							<div class="radio block">D. <label><input type="radio" name="no3" value="D"> Attribute</div>
+							<div class="radio block">E. <label><input type="radio" name="no3" value="E"> Derived Attribute</div>
 						</div>
+						<?php 
+							if (!empty($jawaban)){
+								$index = 2;
+								if ($status[$index] == 1){
+									?>
+									<p>Jawaban Benar</p>	
+									<?php
+								}
+								else
+								{
+									?>
+									<p>Jawaban Salah</p>
+								<p>Jawaban yang benar adalah : <?php echo $jawaban[$index]; ?></p>	
+									<?php 
+								}
+								?>
+							<?php } ?>
 					</div>
 					<div class="form-group">
 					<label for="radio">4. This image represents...</label>
 					<img src="images/derived_attr.png">
 						<div class="jawaban">
-							<div class="radio block">A. <label><input type="radio" name="gender" value="A"> Weak Entity</div>
-							<div class="radio block">B. <label><input type="radio" name="gender" value="B"> Entity Class</div>
-							<div class="radio block">C. <label><input type="radio" name="gender" value="C"> Relationship</div>
-							<div class="radio block">D. <label><input type="radio" name="gender" value="D"> Attribute</div>
-							<div class="radio block">E. <label><input type="radio" name="gender" value="E"> Derived Attribute</div>
+							<div class="radio block">A. <label><input type="radio" name="no4" value="A"> Weak Entity</div>
+							<div class="radio block">B. <label><input type="radio" name="no4" value="B"> Entity Class</div>
+							<div class="radio block">C. <label><input type="radio" name="no4" value="C"> Relationship</div>
+							<div class="radio block">D. <label><input type="radio" name="no4" value="D"> Attribute</div>
+							<div class="radio block">E. <label><input type="radio" name="no4" value="E"> Derived Attribute</div>
 						</div>
+						<?php 
+							if (!empty($jawaban)){
+								$index = 3;
+								if ($status[$index] == 1){
+									?>
+									<p>Jawaban Benar</p>	
+									<?php
+								}
+								else
+								{
+									?>
+									<p>Jawaban Salah</p>	
+								<p>Jawaban yang benar adalah : <?php echo $jawaban[$index]; ?></p>
+									<?php 
+								}
+								?>
+							<?php } ?>
 					</div>
 					<div class="form-group">
 					<label for="radio">5. This image represents...</label>
 					<img src="images/relation.png">
 						<div class="jawaban">
-							<div class="radio block">A. <label><input type="radio" name="gender" value="A"> Weak Entity</div>
-							<div class="radio block">B. <label><input type="radio" name="gender" value="B"> Entity Class</div>
-							<div class="radio block">C. <label><input type="radio" name="gender" value="C"> Relationship</div>
-							<div class="radio block">D. <label><input type="radio" name="gender" value="D"> Attribute</div>
-							<div class="radio block">E. <label><input type="radio" name="gender" value="E"> Derived Attribute</div>
+							<div class="radio block">A. <label><input type="radio" name="no5" value="A"> Weak Entity</div>
+							<div class="radio block">B. <label><input type="radio" name="no5" value="B"> Entity Class</div>
+							<div class="radio block">C. <label><input type="radio" name="no5" value="C"> Relationship</div>
+							<div class="radio block">D. <label><input type="radio" name="no5" value="D"> Attribute</div>
+							<div class="radio block">E. <label><input type="radio" name="no5" value="E"> Derived Attribute</div>
 						</div>
+						<?php 
+							if (!empty($jawaban)){
+								$index = 4;
+								if ($status[$index] == 1){
+									?>
+									<p>Jawaban Benar</p>	
+									<?php
+								}
+								else
+								{
+									?>
+									<p>Jawaban Salah</p>	
+								<p>Jawaban yang benar adalah : <?php echo $jawaban[$index]; ?></p>
+									<?php 
+								}
+								?>
+							<?php } ?>
 					</div>
 					<div class="atasan">
-						<a href="#" role="button" class="btn btn-info ">Submit</a>
+						<input type="submit" role="button" class="btn btn-info"></input>
 					</div>
 				</div>
 			</div>
+		</form>
 		</div>
 <!-- script-for sticky-nav -->
 		<script>
