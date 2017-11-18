@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <?php 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
+	//JAWABAN PG
 $jawaban = ["A","B","C","D","A"];
 $status = [0,0,0,0,0];
 $no1 = $_POST['no1'];
@@ -75,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							<div class="clearfix"> </div>				
 						</div>
-						<div class="">		
+						<div class="profile_details w3l">		
 								<ul>
 									<li class="dropdown profile_details_drop">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -107,10 +108,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	   <div class="mother-grid-inner">
 
 		<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="dashboard.php">Beranda</a> <i class="fa fa-angle-right"></i> <a href="#">Latihan</a> <i class="fa fa-angle-right"></i> <a href="exercise.php">Latihan Soal</a>  <i class="fa fa-angle-right"></i>Entity Relationship Diagram (Part 1)</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Beranda</a> <i class="fa fa-angle-right"></i> <a href="#">Latihan</a> <i class="fa fa-angle-right"></i> <a href="exercise.php">Studi Kasus</a>  <i class="fa fa-angle-right"></i>Entity Relationship Diagram (Part 2)</li>
             </ol>
 <!--four-grids here-->
-		   <p class="summary">Entity Relationship Diagram (Part 1)</p>
+		   <p class="summary">Entity Relationship Diagram (Part 2)</p>
 		<div class="row four-grids">
 		<form method="POST">
 			<div class="grid-form1">
@@ -123,6 +124,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="radio block">D. <label><input type="radio" name="no1" value="D"> Entity-relationship diagram (ERD) is a graphical representation of an information system that shows the relationship between people, objects, places, concepts or events within that system</div>
 							<div class="radio block">E. <label><input type="radio" name="no1" value="E"> All answer is wrong</div>
 						</div>
+
+						<div>
 						<?php 
 							if (!empty($jawaban)){
 								$index = 0;
@@ -141,6 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								?>
 								
 							<?php } ?>
+						</div>
 
 					</div>
 					<div class="form-group">

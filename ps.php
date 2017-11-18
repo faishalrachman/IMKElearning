@@ -47,7 +47,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							<div class="clearfix"> </div>				
 						</div>
-						<div class="">		
+						<div class="profile_details w3l">		
 								<ul>
 									<li class="dropdown profile_details_drop">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -79,17 +79,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	   <div class="mother-grid-inner">
 
 		<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="dashboard.html">Home</a> <i class="fa fa-angle-right"></i> <a href="#">Materi</a> <i class="fa fa-angle-right"></i> <a href="video.php">Video</a>  <i class="fa fa-angle-right"></i>Entity Relationship Diagram (Part 2)</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Beranda</a> <i class="fa fa-angle-right"></i> <a href="#">Latihan</a> <i class="fa fa-angle-right"></i>Studi Kasus</li>
             </ol>
 <!--four-grids here-->
-		   <p class="summary">Entity Relationship Diagram (Part 2)</p>
+		   <p class="summary">Studi Kasus</p>
 		<div class="row four-grids">
-			<div class="col-lg-8 col-md-offset-3">
-				<video class="pidio" controls>
-				  <source src="video/ERD_2.MKV" type="video/mp4">
-				Your browser does not support the video tag.
-				</video>
-			</div>
+			<div class="col-lg-12">
+				<table id="example" class="display" cellspacing="0" width="100%">
+					<thead>
+					<tr>
+						<th>No</th>
+						<th>Materi</th>
+						<th>Aksi</th>
+					</tr>
+					</thead>
+					<tfoot>
+					<tr>
+						<th>No</th>
+						<th>Materi</th>
+						<th>Aksi</th>
+					</tr>
+					</tfoot>
+					<tbody>
+					<tr>
+						<td>1</td>
+						<td>Entity Relationship Diagram (Part 1)</td>
+						<td>
+							<a href="ps1.php" role="button" class="btn btn-info" title="Do this Latihan"> <i class="fa fa-pencil" aria-hidden="true"></i> </a>
+
+						</td>
+
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Entity Relationship Diagram (Part 2)</td>
+						<td>
+							<a href="ps2.php" role="button" class="btn btn-info" title="Do this Latihan"> <i class="fa fa-pencil" aria-hidden="true"></i> </a>
+
+						</td>
+					</tr>
+				</div>
 		</div>
 <!-- script-for sticky-nav -->
 		<script>
@@ -165,6 +194,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         $('#example').DataTable({
             "language": {
                 "lengthMenu": "Show _MENU_ ",
+				"search": "Cari ",
+				"info": "Tampilkan  _PAGE_ dari _PAGES_ laman",
+				"infoEmpty": "Materi tidak ada",
+				"infoFiltered": "(tersaring dari _MAX_ materi)",
+				"paginate": {
+				  "previous": "Sebelumnya",
+				  "next":"Selanjutnya"
+				}
             },
             "columns": [
                 { "width": "2%",className: "dt-center"},

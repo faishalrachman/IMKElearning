@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							<div class="clearfix"> </div>				
 						</div>
-						<div class="">		
+						<div class="profile_details w3l">		
 								<ul>
 									<li class="dropdown profile_details_drop">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -107,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	   <div class="mother-grid-inner">
 
 		<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="dashboard.php">Beranda</a> <i class="fa fa-angle-right"></i> <a href="#">Latihan</a> <i class="fa fa-angle-right"></i> <a href="exercise.php">Latihan Soal</a>  <i class="fa fa-angle-right"></i>Entity Relationship Diagram (Part 1)</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Beranda</a> <i class="fa fa-angle-right"></i> <a href="#">Latihan</a> <i class="fa fa-angle-right"></i> <a href="exercise.php">Studi Kasus</a>  <i class="fa fa-angle-right"></i>Entity Relationship Diagram (Part 1)</li>
             </ol>
 <!--four-grids here-->
 		   <p class="summary">Entity Relationship Diagram (Part 1)</p>
